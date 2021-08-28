@@ -1,11 +1,16 @@
 package SalarioLiquido;
 
-import java.util.List;
-import java.util.ArrayList;
+import SalarioLiquido.controller.SalarioController;
 
 public class SalarioLiquido{
     //MAIN
     public static void main(String []args){
-        System.out.println("Hello World!");
+        System.out.println("Resultado: ");
+        SalarioController().addFuncionario();
+        SalarioController().addDescontos();
+    }
+
+    private static SalarioController SalarioController() {
+        return null;
     }
 }
