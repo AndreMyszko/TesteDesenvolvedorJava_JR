@@ -16,8 +16,7 @@ apenas uma vez. Dica: você não precisa ordenar a lista.
 
 
 ⦁ 3)	Codifique as solicitações abaixo:
-**(img em anexo) => ../testedesenvolvedorjava_jr/info/img/**
-3.1 - Mapeie as classes conforme o diagrama MER ilustrado abaixo: (img em anexo)
+3.1 - Mapeie as classes conforme o diagrama MER ilustrado abaixo: **(img em anexo) => ../testedesenvolvedorjava_jr/info/img/**
 3.2 - A partir do mapeamento, construa uma classe de controle (SalarioController) que deverá conter uma lista de funcionários e deverá processar 
 os dados das entidades mepeadas através do método calcularSalarioLiquido(). 
 Este método deverá listar todos os funcionários e seus respectivos salarios líquidos. O salário liquido pode ser calculado com a formula: 
@@ -25,7 +24,7 @@ Este método deverá listar todos os funcionários e seus respectivos salarios l
 3.3 – Monte a execução do programa em uma classe main. 
 Nesta você fará a chamada do método SalarioController. calcularSalarioLiquido() e inicializará a lista de funcionarios/descontos: 
 SalarioController.setFuncionarios(List <Funcionario> funcionarios).  Para inicialização, utilize os valores  das tabelas representadas abaixo:
-DADOS TABELA DESCONTOS: (img em anexo)
-DADOS TABELA FUNCIONARIOS: (img em anexo)
+DADOS TABELA DESCONTOS: **(img em anexo) => ../testedesenvolvedorjava_jr/info/img/**
+DADOS TABELA FUNCIONARIOS: **(img em anexo) => ../testedesenvolvedorjava_jr/info/img/**
 3.4 – Imprimir o resultado do cálculo (funcionário vs salário liquido), conforme ilustração abaixo:
-RESULTADO ESPERADO: (img em anexo)
+RESULTADO ESPERADO: **(img em anexo) => ../testedesenvolvedorjava_jr/info/img/**
