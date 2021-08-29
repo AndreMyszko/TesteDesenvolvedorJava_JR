@@ -6,18 +6,19 @@ public class parseHexInt{
         System.out.println(convertHexToDecimal("10"));
         System.out.println(convertHexToDecimal("abc"));
         System.out.println(convertHexToDecimal("f1de"));
+        System.out.println(convertHexToDecimal("1c23d3ce"));
     }
     public static int convertHexToDecimal(String hexa){
         String chars = "0123456789ABCDEF";
         hexa = hexa.toUpperCase();
-        int val = 0;
+        int resultado = 0;
         for (int i = 0; i < hexa.length(); i++)
         {
             char charPosition = hexa.charAt(i);
             int charValue = chars.indexOf(charPosition);
-            val = 16*val + charValue;
+            resultado = 16*resultado + charValue;
         }
-        return val;
+        return resultado;
     }
 }
 
