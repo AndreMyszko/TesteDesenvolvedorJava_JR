@@ -10,5 +10,4 @@ public class SalarioLiquido{
         sc.addFuncionario();
         sc.addDescontos();
     }
-
 }
