@@ -30,6 +30,4 @@ public class Descontos {
     public void setVl_desconto(Double vl_desconto) {
         this.vl_desconto = vl_desconto;
     }
-
-
 }
