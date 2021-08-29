@@ -8,12 +8,10 @@ Vamos chamar este método de parseHexInt(), seguem alguns exemplos:
 Observação: você precisa implementar um código que convert um string em um int. Você não pode usar funções prontas como parseInt nem int(text, 16). 
 A entrada do método deve ser uma entrada válida (ex:  strings não vazios, contend chars de 0 a 9 e entre A e F) e sem sinais negativos.
 
-
 ⦁ 2)	Dado uma lista de inteiros, encontre os dois numeros em que a soma destes é a maior dentre todas as possibilidades. 
 Exemplo:
 Observação: a lista de entrada deve conter pelo menos dois itens. Seu algoritmo pode percorrer a lista 
 apenas uma vez. Dica: você não precisa ordenar a lista.
-
 
 ⦁ 3)	Codifique as solicitações abaixo:
 3.1 - Mapeie as classes conforme o diagrama MER ilustrado abaixo: **(img em anexo) => ../testedesenvolvedorjava_jr/info/img/**
