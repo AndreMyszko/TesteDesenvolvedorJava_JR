@@ -7,25 +7,27 @@ import SalarioLiquido.model.Funcionario;
 import SalarioLiquido.model.Descontos;
 
 public class SalarioController {
+    //CÁLCULO SALÁRIO LÍQUIDO
 
+    
+
+    //REPOSITORY - SPRINGBOOT/JPA/JDBC/HIBERNATE/SQL...
     static List<Funcionario> listaFuncionario = new ArrayList<Funcionario>();
     static List<Descontos> listaDescontos = new ArrayList<Descontos>();
-
     public static List<Funcionario> addFuncionario(){
-        Funcionario jonas = new Funcionario((long) 81, "andre", 3235.00);
-        Funcionario roseli = new Funcionario((long) 82, "luiz", 1750.00);
-        Funcionario silvio = new Funcionario((long) 83, "bill", 17321.00);
-        Funcionario maria = new Funcionario((long) 84, "bill", 7322.00);
-        Funcionario roberto = new Funcionario((long) 85, "bill", 2280.00);
+        Funcionario jonas = new Funcionario((long) 81, "Jonas Alberto Lekinihs", 3235.00);
+        Funcionario roseli = new Funcionario((long) 82, "Roseli Nunes", 1750.00);
+        Funcionario silvio = new Funcionario((long) 83, "Silvio Santos", 17321.00);
+        Funcionario maria = new Funcionario((long) 84, "Maria da Glória", 7322.00);
+        Funcionario roberto = new Funcionario((long) 85, "Roberto Robertinho", 2280.00);
         listaFuncionario.add(jonas);
         listaFuncionario.add(roseli);
         listaFuncionario.add(silvio);
         listaFuncionario.add(maria);
         listaFuncionario.add(roberto);
-        System.out.println("número de funcionários: " + listaFuncionario.size());
+        System.out.println(">quantidade de funcionários: " + listaFuncionario.size());
         return listaFuncionario;
     }
-
     public static List<Descontos> addDescontos(){
         Descontos d1 = new Descontos(listaFuncionario.get(0).getId_funcionario(), (long) 1, 11.56);
         Descontos d2 = new Descontos(listaFuncionario.get(0).getId_funcionario(), (long) 2, 54.22);
@@ -67,10 +69,7 @@ public class SalarioController {
         listaDescontos.add(d18);
         listaDescontos.add(d19);
         listaDescontos.add(d20);
-        System.out.println("Total de descontos geral: " + listaDescontos.size());
+        System.out.println(">quantidade de descontos geral: " + listaDescontos.size());
         return listaDescontos;
     }
-
-
-
 }
