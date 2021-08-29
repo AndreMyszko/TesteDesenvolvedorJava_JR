@@ -13,7 +13,7 @@ public class parseHexInt{
                 entrada = br.readLine();
                 if (!entrada.isBlank() && !entrada.isEmpty() && !entrada.equals("sair")){
                     if (convertoHexToDecimal(entrada) < 0) {
-                        System.out.println(">erro: insira numeros de 0-9 positivos e letras de A-F sem espaços entre os mesmos");                        
+                        System.out.println(">erro: insira numeros de 0-9 positivos e letras de A-F sem espaços entre os mesmos");
                     } else{
                         System.out.println(">" + convertoHexToDecimal(entrada));
                     }
@@ -24,13 +24,13 @@ public class parseHexInt{
         } while(!entrada.equals("sair"));
         System.out.println("[CONSOLE ENCERRADO]");
     }
-    public static int convertoHexToDecimal(String hex){
+    public static int convertoHexToDecimal(String hexa){
         String chars = "0123456789ABCDEF";
-        hex = hex.toUpperCase();
+        hexa = hexa.toUpperCase();
         int val = 0;
-        for (int i = 0; i < hex.length(); i++)
+        for (int i = 0; i < hexa.length(); i++)
         {
-            char charPosition = hex.charAt(i);
+            char charPosition = hexa.charAt(i);
             int charValue = chars.indexOf(charPosition);
             val = 16*val + charValue;
         }
