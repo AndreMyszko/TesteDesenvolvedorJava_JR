@@ -7,11 +7,8 @@ import SalarioLiquido.model.Funcionario;
 import SalarioLiquido.model.Descontos;
 
 public class SalarioController {
-    //CÁLCULO SALÁRIO LÍQUIDO
-
-    
-
-    //REPOSITORY - SPRINGBOOT/JPA/JDBC/HIBERNATE/SQL...
+    //REPOSITORY - SPRINGBOOT/JPA/JDBC/HIBERNATE/SQL... OBS.: 
+    //FOREGINKEY?FUNC_ID <-> SPRINGBOOT(@OneToMany/@ManyToOne...) | PK/AUTINCREMENT...
     static List<Funcionario> listaFuncionario = new ArrayList<Funcionario>();
     static List<Descontos> listaDescontos = new ArrayList<Descontos>();
     public static List<Funcionario> addFuncionario(){
@@ -25,7 +22,7 @@ public class SalarioController {
         listaFuncionario.add(silvio);
         listaFuncionario.add(maria);
         listaFuncionario.add(roberto);
-        System.out.println(">quantidade de funcionários: " + listaFuncionario.size());
+        //System.out.println(">quantidade de funcionários: " + listaFuncionario.size());
         return listaFuncionario;
     }
     public static List<Descontos> addDescontos(){
@@ -69,7 +66,36 @@ public class SalarioController {
         listaDescontos.add(d18);
         listaDescontos.add(d19);
         listaDescontos.add(d20);
-        System.out.println(">quantidade de descontos geral: " + listaDescontos.size());
+        //System.out.println(">quantidade de descontos geral: " + listaDescontos.size());
         return listaDescontos;
+    }
+    //CÁLCULO SALÁRIO LÍQUIDO
+    public static void calcularSalarioLiquido(){
+        //FOGO NO PARQUINHO... stream aceita apenas "final" no contexto, o que inviabilizou a utilização do laço FOR(i < listFunc.size())
+        Double totalf2 = listaDescontos.stream()
+            .filter(d -> d.getId_funcionario() == listaFuncionario.get(1).getId_funcionario())
+            .mapToDouble(p -> p.getVl_desconto())
+            .sum();
+        System.out.println(listaFuncionario.get(1).getNm_cliente() + " - " + (listaFuncionario.get(1).getVl_salario_bruto() - totalf2));       
+        Double totalf5 = listaDescontos.stream()
+            .filter(d -> d.getId_funcionario() == listaFuncionario.get(4).getId_funcionario())
+            .mapToDouble(p -> p.getVl_desconto())
+            .sum();
+        System.out.println(listaFuncionario.get(4).getNm_cliente() + " - " + (listaFuncionario.get(4).getVl_salario_bruto() - totalf5));       
+        Double totalf1 = listaDescontos.stream()
+            .filter(d -> d.getId_funcionario() == listaFuncionario.get(0).getId_funcionario())
+            .mapToDouble(p -> p.getVl_desconto())
+            .sum();
+        System.out.println(listaFuncionario.get(0).getNm_cliente() + " - " + (listaFuncionario.get(0).getVl_salario_bruto() - totalf1));        
+        Double totalf4 = listaDescontos.stream()
+            .filter(d -> d.getId_funcionario() == listaFuncionario.get(3).getId_funcionario())
+            .mapToDouble(p -> p.getVl_desconto())
+            .sum();
+        System.out.println(listaFuncionario.get(3).getNm_cliente() + " - " + (listaFuncionario.get(3).getVl_salario_bruto() - totalf4));       
+        Double totalf3 = listaDescontos.stream()
+            .filter(d -> d.getId_funcionario() == listaFuncionario.get(2).getId_funcionario())
+            .mapToDouble(p -> p.getVl_desconto())
+            .sum();
+        System.out.println(listaFuncionario.get(2).getNm_cliente() + " - " + (listaFuncionario.get(2).getVl_salario_bruto() - totalf3));
     }
 }
