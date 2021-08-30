@@ -8,7 +8,7 @@ import SalarioLiquido.model.Descontos;
 
 public class SalarioController {
     //REPOSITORY - SPRINGBOOT/JPA/JDBC/HIBERNATE/SQL... OBS.: 
-    //FOREGINKEY?FUNC_ID <-> SPRINGBOOT(@OneToMany/@ManyToOne...) | PK/AUTINCREMENT...
+    //FOREGINKEY?FUNC_ID <-> SPRINGBOOT(@OneToMany/@ManyToOne...) | PK/AUTOINCREMENT...
     static List<Funcionario> listaFuncionario = new ArrayList<Funcionario>();
     static List<Descontos> listaDescontos = new ArrayList<Descontos>();
     public static List<Funcionario> addFuncionario(){
@@ -72,6 +72,7 @@ public class SalarioController {
     //CÁLCULO SALÁRIO LÍQUIDO
     public static void calcularSalarioLiquido(){
         //FOGO NO PARQUINHO... stream aceita apenas "final" no contexto, o que inviabilizou a utilização do laço FOR(i < listFunc.size())
+        //Poderia adicionar os valores em um lista para fazer o OrderBy(salarioLíquido)... mas a tabela RESULTADO é apenas uma coluna nome/salario(string)
         Double totalf2 = listaDescontos.stream()
             .filter(d -> d.getId_funcionario() == listaFuncionario.get(1).getId_funcionario())
             .mapToDouble(p -> p.getVl_desconto())
