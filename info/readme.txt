@@ -1,5 +1,16 @@
 *Teste Desenvolvedor Java JR*
 
+LINKS TUTORIALS POINT:
+questao1:
+http://tpcg.io/HCo0ZVcE
+
+questao2:
+http://tpcg.io/xjSC5ATi
+
+questao3:
+http://tpcg.io/QcOAtQKY
+
+
 Favor codificar as questões de programação e encaminhar via link o código. O link deve ser encaminhado pelo site https://www.tutorialspoint.com/ . 
 Clique no link abaixo para compilar em Java: Java: ⦁⦁ https://www.tutorialspoint.com/compile_java_online.php ⦁⦁
 
