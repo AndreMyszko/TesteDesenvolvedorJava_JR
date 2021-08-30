@@ -1,3 +1,4 @@
+//COMPILAR EM IDE, UMA VEZ QUE EXISTE MAIS DE UM ARQUIVO(MODEL/CONTROLLER/MAIN)...
 package SalarioLiquido;
 
 import SalarioLiquido.controller.SalarioController;
